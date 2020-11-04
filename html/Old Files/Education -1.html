@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yuhao Dong</title>
+    
+    <style>
+        
+        /* * {box-sizing: border-box}  Note: for full page tabs see if it is needed*/
+
+        .sidenav{
+            height:100%;
+            width:300px;
+            position:fixed;
+            /* z-index: 1; */
+            top:0;
+            left:0;
+            background-color:antiquewhite;
+            overflow-x:hidden;
+            padding-top: 20px; /*How far from the top */    
+        }
+        
+        .sidenav a{
+            padding: 15px;
+            text-decoration: none;
+            font-size: 35px;
+            color: black;
+            display: block;
+            }
+        
+        .sidenav a:hover{
+            color:darkblue;
+            background-color: burlywood;
+        }
+        
+        .main{
+            margin-left:300px;
+            /*margin-top:100px;*/
+            /*text-align: center;*/
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+
+        
+        .center{
+            text-align: center;
+        }
+        
+        .font1{
+            font-family: "Comic Sans MS", cursive, sans-serif;               /* for manu description */
+        }
+        
+        .rounded{
+            border-radius:50%;
+            border:8px solid lightgray;                                       /* for manu picture */
+        }
+        
+        .name{
+            font-size:500%;
+            font-family: Impact, Charcoal, sans-serif;                       /* for header name*/
+        }
+        .fontweight1{
+            font-weight:600
+        }
+        
+        
+        .tablink {
+            background-color: #555;                                          /* for full page tab*/
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 20px;
+            width: 25%;
+        }
+
+        .tablink:hover {
+            background-color: #777;                                          /* for full page tab*/
+        }
+        
+        .tabcontent {
+            color: black;                           /* for full page content*/
+            display: none;
+            padding: 100px 20px;                                            /* for full page tab*/
+            height: 100%;
+        }
+        #Home {background-color: white;}
+        #News {background-color: antiquewhite;}
+        #Contact {background-color: antiquewhite;}
+        #About {background-color: antiquewhite;}
+        
+        
+        
+        
+        /*
+        Below are for the Research Gallery
+        */
+        
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+
+        .responsive {
+            padding: 5px;
+            float: left;
+            width: 45%;
+            margin-left: 50px;
+        }
+
+
+        
+        @media only screen and (max-width: 1100px) {
+            .responsive {
+                width: 45%;
+                margin: 6px;
+            }
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .responsive {
+                width: 95%;
+            }
+        }
+
+        
+        
+        
+        /*
+        Accordion
+        */
+        .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+        
+        
+        
+        
+    </style>
+    
+</head>    
+
+
+    
+<body style="font-family: verdana;">    
+    <div class="sidenav center font1">
+        <img src="/assets/img/me.jpg" class="rounded" style="width:180px">
+        <br>
+        <br>
+        <a href="/index.html">Home</a>
+        <div style="background-color: gainsboro;"><a href="/html/Education.html">Education</a></div>
+        <a href="/html/Research.html">Research</a>
+        <a href="/html/Jobs.html">Jobs</a>
+        <a href="/html/Skills.html">Skills</a>
+        <a href="/html/Habits.html">Habits</a>
+    </div>
+    
+    <div class="main">
+        <div style="text-align: center;font-size: 400%;margin-top: 100px;margin-bottom: 20px"><b>Education</b></div>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <div>
+            <span style="float: right;margin-top:7px;font-size: 110%;color:#E3242B" class="fontweight1";>Fall 2015 - Spring 2019</span>
+        <span style="float: left;font-size: 170%;"><b>The City College of New York</b></span>
+        </div> 
+        <br>
+        <br>
+        <br>
+        <div style="font-size: 130%;color:darkgray"><b>Bachelor of Engineering &nbsp &nbsp <i>Mechanical Engineering</i></b></div>
+        <br>
+
+        <div style="font-size: 130%;color:darkgray"><b>GPA: 3.925</b></div>
+        <hr>
+        
+        <div>
+            <h1 style="font-size:150%">Coursework / Projects</h1>
+        </div>
+        
+        
+        <div>
+            <button class="tablink" onclick="openPage('Home', this, 'brown')" id="defaultOpen">SolidWorks</button>
+            <button class="tablink" onclick="openPage('News', this, 'brown')">MatLab</button>
+            <button class="tablink" onclick="openPage('Contact', this, 'brown')">CNC Machine</button>
+            <button class="tablink" onclick="openPage('About', this, 'brown')">Other</button>
+            
+            <div id="Home" class="tabcontent">
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="/assets/img/Computer%20Mouse.JPG">
+                            <img src="/assets/img/Computer%20Mouse.JPG" alt="Alt1" width="600" height="400">
+                        </a>
+                        <div class="desc"><b>Computer Mouse Modeling</b>
+                        <button class="accordion">Project PDF File</button>
+                            <div class="panel">
+                                 <iframe src="/assets/pdf/computer%20mouse.pdf" width="100%" height="500px">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="/assets/img/bookshelf.JPG">
+                    <img src="/assets/img/bookshelf.JPG" alt="Alt2" width="600" height="400">
+                        </a>
+                        <div class="desc"> <b>Bookshelf Modeling and Force Analysis</b>
+                        <button class="accordion">Project PDF File</button>
+                            <div class="panel">
+                                 <iframe src="/assets/pdf/Book%20Shelf.pdf" width="100%" height="500px">
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="/assets/img/Pulley%20System%20Analysis.JPG">
+                            <img src="/assets/img/Pulley%20System%20Analysis.JPG" alt="Alt3" width="600" height="400">
+                        </a>
+                        <div class="desc"><b>Pulley System Analysis</b>
+                        <button class="accordion">Project PDF File</button>
+                            <div class="panel">
+                                 <iframe src="/assets/pdf/FEM%20Modeling%20Project.pdf" width="100%" height="500px">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive">
+                    <div class="gallery">
+                        <a target="_blank" href="/assets/img/Iphone%20X.JPG">
+                            <img src="/assets/img/Iphone%20X.JPG" alt="Alt4" width="600" height="400">
+                        </a>
+                        <div class="desc"><b>Iphone X Modeling</b>
+                        <button class="accordion">Project PDF File</button>
+                            <div class="panel">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            <script>
+                                var acc = document.getElementsByClassName("accordion");
+                                var i;
+
+                                for (i = 0; i < acc.length; i++) {
+                                    acc[i].addEventListener("click", function() {
+                                        this.classList.toggle("active");
+                                        var panel = this.nextElementSibling;
+                                        if (panel.style.display === "block") {
+                                            panel.style.display = "none";
+                                        } else {
+                                            panel.style.display = "block";
+                                        }
+                                    });
+                                }
+                            </script>
+            </div>
+
+            <div id="News" class="tabcontent">
+                <h3>News</h3>
+                <p>Some news this fine day!</p> 
+            </div>
+
+            <div id="Contact" class="tabcontent">
+                <h3>Contact</h3>
+                <p>Get in touch, or swing by for a cup of coffee.</p>
+            </div>
+
+            <div id="About" class="tabcontent">
+                <h3>About</h3>
+                <p>Who we are and what we do.</p>
+            </div>
+
+            <script>
+                function openPage(pageName,elmnt,color) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablink");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].style.backgroundColor = "";
+                    }
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.style.backgroundColor = color;
+                }
+
+// Get the element with id="defaultOpen" and click on it
+                document.getElementById("defaultOpen").click();
+            </script>
+        </div>
+        
+    </div>
+        
+    
+
+</body>    
+    
+    
+
+
+
+</html>
